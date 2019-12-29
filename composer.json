@@ -1,0 +1,31 @@
+{
+  "name": "we-push-it/yii2-splunk-log-target",
+  "description": "Yii 2 log target which can log to Splunk Enterprise via curl",
+  "keywords": ["yii", "extension", "log", "splunk"],
+  "homepage": "https://github.com/we-push-it/yii2-splunk-log-target",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/we-push-it/yii2-splunk-log-target/issues",
+    "source": "https://github.com/we-push-it/yii2-splunk-log-target"
+  },
+  "authors": [
+    {
+      "name": "Dominik Hasselkuss",
+      "email": "hello@moaas.de"
+    },
+    {
+      "name": "moaas GmbH",
+      "email": "hello@moaas.de"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "wepushit\\log\\": "src",
+      "wepushit\\log\\tests\\": "tests"
+    }
+  }
+}

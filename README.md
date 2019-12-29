@@ -34,6 +34,24 @@ return [
     ],
 ];
 ```
+you can also combine your log targets:
+
+```php
+'log' => [
+    'traceLevel' => YII_DEBUG ? 3 : 0,
+    'targets' => [
+        [
+            'class' => 'yii\log\FileTarget',
+            'levels' => ['error', 'warning'],
+        ],
+        [
+            'class' => 'wepushit\log\SplunkTarget',
+            'levels' => ['error', 'warning']
+        ],
+    ],
+],
+```
+
 
 additionally you should adjust your params-config:
 

@@ -28,6 +28,7 @@ class SplunkTarget extends Target
         $splunkmsg = [
             'source' => Yii::$app->params['splunk']['source'],
             'host' => Yii::$app->params['splunk']['host'],
+            'sourcetype' => Yii::$app->params['splunk']['sourcetype'],
             'event' => '',
         ];
 

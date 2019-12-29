@@ -27,7 +27,7 @@ class SplunkTarget extends Target
 
         $splunkmsg = [
             'source' => Yii::$app->params['splunk']['source'],
-            'host' => $_SERVER['SERVER_NAME'],
+            'host' => Yii::$app->params['splunk']['host'],
             'event' => '',
         ];
 
@@ -54,7 +54,7 @@ class SplunkTarget extends Target
             curl_close($ch);
         }
     }
-    
+
     public function formatMessage($message)
     {
         list($text, $level, $category, $timestamp) = $message;

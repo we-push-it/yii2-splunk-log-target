@@ -22,7 +22,7 @@ return [
         'log' => [
             'targets' => [
                 [
-                    'class' => 'wepushit\log\SplunkTarget',
+                    'class' => wepushit\log\SplunkTarget::class,
                     
                     // It is optional parameter. The message levels that this target is interested in.
                     // The parameter can be an array.
@@ -34,6 +34,7 @@ return [
     ],
 ];
 ```
+
 you can also combine your log targets:
 
 ```php
@@ -41,11 +42,11 @@ you can also combine your log targets:
     'traceLevel' => YII_DEBUG ? 3 : 0,
     'targets' => [
         [
-            'class' => 'yii\log\FileTarget',
+            'class' => yii\log\FileTarget::class,
             'levels' => ['error', 'warning'],
         ],
         [
-            'class' => 'wepushit\log\SplunkTarget',
+            'class' => wepushit\log\SplunkTarget::class,
             'levels' => ['error', 'warning']
         ],
     ],
